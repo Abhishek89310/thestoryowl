@@ -8,38 +8,128 @@
 <meta property="og:title" content="The Story Owl">
 <meta property="og:description" content="One minute. One story. Every day.">
 <meta property="og:image" content="owl.jpg">
+<meta name="theme-color" content="#0d0a18">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- one owl drawing, reused by every owl on the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="owl-body">
+      <path d="M50 30 L46 16 L56 27 Z M70 30 L74 16 L64 27 Z" fill="#6e4528"/>
+      <ellipse cx="60" cy="58" rx="19" ry="25" fill="#8a5a3c"/>
+      <ellipse cx="60" cy="65" rx="12" ry="16" fill="#e2c093"/>
+      <path d="M53 61 q2 2 4 0 M63 61 q2 2 4 0 M58 68 q2 2 4 0" stroke="#b58d5f" stroke-width="1.4" fill="none"/>
+      <circle cx="52.5" cy="45" r="8.5" fill="#f6ead0"/><circle cx="67.5" cy="45" r="8.5" fill="#f6ead0"/>
+      <g class="eyes"><circle cx="52.5" cy="45" r="4.4" fill="#1d1426"/><circle cx="67.5" cy="45" r="4.4" fill="#1d1426"/>
+        <circle cx="54" cy="43.5" r="1.4" fill="#fff"/><circle cx="69" cy="43.5" r="1.4" fill="#fff"/></g>
+      <path d="M57 51 h6 l-3 6 z" fill="#f2a33a"/>
+    </g>
+  </defs>
+</svg>
+
 <header class="site"><div class="wrap">
-  <img src="owl.jpg" alt=""><b>The Story Owl</b>
-  <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <img src="owl.jpg" alt="" width="38" height="38"><a class="brand" href="./">The Story Owl</a>
+  <nav><a href="#series">Stories</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
 </div></header>
 
-<main class="wrap">
-  <section class="hero">
-    <img src="owl.jpg" alt="The Story Owl logo">
+<section class="sky" id="sky">
+  <div class="moon"></div>
+
+  <!-- owls carrying letters -->
+  <div class="flyer" style="top:140px"><svg viewBox="0 0 120 100" aria-hidden="true">
+    <path class="wl" d="M48 48 Q20 28 3 42 Q20 50 16 60 Q32 57 48 63Z" fill="#6e4528"/>
+    <path class="wr" d="M72 48 Q100 28 117 42 Q100 50 104 60 Q88 57 72 63Z" fill="#6e4528"/>
+    <use href="#owl-body"/>
+    <rect x="51" y="81" width="18" height="12" rx="1" fill="#f3e6c6"/><path d="M51 81 l9 7 l9 -7" stroke="#c9b48a" fill="none"/><circle cx="60" cy="88" r="2.6" fill="#a8261f"/>
+  </svg></div>
+  <div class="flyer f2" style="top:250px"><svg viewBox="0 0 120 100" aria-hidden="true">
+    <path class="wl" d="M48 48 Q20 28 3 42 Q20 50 16 60 Q32 57 48 63Z" fill="#7a5233"/>
+    <path class="wr" d="M72 48 Q100 28 117 42 Q100 50 104 60 Q88 57 72 63Z" fill="#7a5233"/>
+    <use href="#owl-body"/>
+    <rect x="51" y="81" width="18" height="12" rx="1" fill="#f3e6c6"/><circle cx="60" cy="87" r="2.6" fill="#a8261f"/>
+  </svg></div>
+  <div class="flyer f3" style="top:90px"><svg viewBox="0 0 120 100" aria-hidden="true">
+    <path class="wl" d="M48 48 Q20 28 3 42 Q20 50 16 60 Q32 57 48 63Z" fill="#e8e4ee"/>
+    <path class="wr" d="M72 48 Q100 28 117 42 Q100 50 104 60 Q88 57 72 63Z" fill="#e8e4ee"/>
+    <use href="#owl-body"/>
+  </svg></div>
+
+  <div class="snitch" aria-hidden="true"><span class="w l"></span><span class="ball"></span><span class="w r"></span></div>
+
+  <div class="wrap hero">
+    <div class="logo-wrap">
+      <img class="logo" src="owl.jpg" alt="The Story Owl logo" width="150" height="150">
+      <svg class="perch" viewBox="0 0 120 100" aria-hidden="true">
+        <ellipse cx="41" cy="62" rx="8" ry="17" fill="#6e4528"/><ellipse cx="79" cy="62" rx="8" ry="17" fill="#6e4528"/>
+        <use href="#owl-body"/>
+        <path d="M50 82 l-2 5 M55 82 l0 5 M65 82 l0 5 M70 82 l2 5" stroke="#f2a33a" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </div>
     <h1>The Story Owl</h1>
     <p>Short animated stories you can watch in a minute. One minute, one story, every day. 🦉</p>
     <div class="btns">
       <a class="btn solid" href="https://www.instagram.com/thestoryowl/" target="_blank" rel="noopener">Follow on Instagram</a>
+      <a class="btn" href="#series">See the stories</a>
     </div>
-  </section>
+  </div>
 
+  <svg class="castle" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path fill="#090713" d="M0 170 V128 Q120 108 240 122 L300 118 V84 L292 84 L312 40 L332 84 L324 84 V112 L380 112 V70 L372 70 L396 18 L420 70 L412 70 V104 L470 104 V58 L462 58 L490 0 L518 58 L510 58 V100 L560 100 V76 L552 76 L574 34 L596 76 L588 76 V104 L650 104 V64 L642 64 L668 12 L694 64 L686 64 V108 L750 108 V80 L742 80 L762 42 L782 80 L774 80 V116 L860 120 Q1000 104 1200 126 V170 Z"/>
+    <g class="win">
+      <rect x="306" y="94" width="8" height="12" rx="4"/><rect x="390" y="80" width="10" height="14" rx="5"/>
+      <rect x="484" y="68" width="10" height="16" rx="5" style="animation-delay:-1.2s"/><rect x="484" y="88" width="10" height="10" rx="4"/>
+      <rect x="569" y="84" width="9" height="12" rx="4" style="animation-delay:-2.1s"/><rect x="662" y="74" width="10" height="16" rx="5" style="animation-delay:-.6s"/>
+      <rect x="756" y="88" width="8" height="12" rx="4" style="animation-delay:-3s"/><rect x="430" y="110" width="8" height="10" rx="3"/><rect x="610" y="112" width="8" height="10" rx="3" style="animation-delay:-1.7s"/>
+    </g>
+  </svg>
+</section>
+
+<main class="wrap">
+  <h2 class="section-title" id="series">Three kinds of magic</h2>
+  <p class="section-sub">New animated Reels every day</p>
   <section class="cards">
-    <div class="card"><div class="e">📜</div><h3>Panchatantra tales</h3><p>Timeless Indian fables retold in English, each ending with a moral worth remembering.</p></div>
-    <div class="card"><div class="e">⚡</div><h3>Wizarding facts</h3><p>Fascinating facts and moments from the wizarding world. Fan-made.</p></div>
+    <div class="card"><div class="e">📜</div><h3>Panchatantra Tales</h3><p>Timeless Indian fables retold in English, each ending with a moral worth remembering.</p></div>
+    <div class="card"><div class="e">⚡</div><h3>Wizarding Facts</h3><p>Fascinating facts and moments from the wizarding world. Fan-made.</p></div>
     <div class="card"><div class="e">📰</div><h3>Trending in 60s</h3><p>Quick, fact-checked explainers on what everyone is talking about.</p></div>
   </section>
+
+  <div class="letter">
+    <div class="seal">O</div>
+    <h2>Your letter has arrived</h2>
+    <p>The owl brings a new story every day. Follow so you never miss one.</p>
+    <a class="btn solid" href="https://www.instagram.com/thestoryowl/" target="_blank" rel="noopener">Open on Instagram</a>
+  </div>
 </main>
 
 <footer><div class="wrap">
   © 2026 The Story Owl · <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="data-deletion.html">Data deletion</a><br>
   Wizarding-world videos are fan-made and not affiliated with Warner Bros. or J.K. Rowling. Videos use AI-generated narration.
 </div></footer>
+
+<script>
+  // twinkling stars and floating candles (a few dozen tiny elements, CSS-animated)
+  (function () {
+    var sky = document.getElementById("sky"), f = document.createDocumentFragment(), i, s;
+    for (i = 0; i < 70; i++) {
+      s = document.createElement("span"); s.className = "star";
+      var r = Math.random() * 2 + 1;
+      s.style.cssText = "left:" + Math.random() * 100 + "%;top:" + Math.random() * 70 + "%;width:" + r + "px;height:" + r +
+        "px;animation-delay:" + (-Math.random() * 3) + "s;animation-duration:" + (2 + Math.random() * 3) + "s";
+      f.appendChild(s);
+    }
+    var spots = [[6, 22], [16, 48], [26, 14], [74, 46], [86, 30], [94, 56], [12, 66], [88, 70]];
+    for (i = 0; i < spots.length; i++) {
+      s = document.createElement("span"); s.className = "candle";
+      s.style.cssText = "left:" + spots[i][0] + "%;top:" + spots[i][1] + "%;animation-delay:" + (-i * 0.7) + "s;opacity:" + (0.55 + (i % 3) * 0.2);
+      f.appendChild(s);
+    }
+    sky.insertBefore(f, sky.firstChild);
+  })();
+</script>
 </body>
 </html>
